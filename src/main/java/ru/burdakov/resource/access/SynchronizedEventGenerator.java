@@ -1,5 +1,9 @@
 package ru.burdakov.resource.access;
 
+/**
+ * Правильное использование общедоступных ресурсов потоками
+ * @see synchronized
+ */
 public class SynchronizedEventGenerator extends IntGenerator {
 
     private int currantValue = 0;

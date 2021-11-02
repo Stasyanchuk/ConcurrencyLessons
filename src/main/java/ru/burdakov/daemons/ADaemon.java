@@ -9,6 +9,7 @@ public class ADaemon implements Runnable{
         try {
             System.out.println("Start ADaemon");
             TimeUnit.SECONDS.sleep(1);
+            sayHello();
         } catch (InterruptedException e) {
             System.out.println("Exiting via InterruptedException");
         } finally {
@@ -17,9 +18,17 @@ public class ADaemon implements Runnable{
 
     }
 
+    private void sayHello(){
+        try {
+            System.out.println("HELLO");
+        } finally {
+            System.out.println("BYE BYE");
+        }
+    }
+
     public static void main(String[] args) {
         Thread t = new Thread(new ADaemon());
-        t.setDaemon(false);
+        t.setDaemon(true);
         t.start();
 
         try {
