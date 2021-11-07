@@ -11,7 +11,7 @@ public class SynchronizedEventGenerator extends IntGenerator {
     @Override
     public synchronized int next() {
         ++currantValue;
-        Thread.yield();
+        Thread.yield(); // не сработает, так как метод synchronized
         ++currantValue;
         return currantValue;
     }

@@ -3,7 +3,6 @@ package ru.burdakov.resource.access.pair;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -14,7 +13,7 @@ public abstract class PairManager {
     protected Pair p = new Pair();
 
     private List<Pair> storage = Collections.synchronizedList(new ArrayList<>());
-CopyOnWriteArrayList
+
     public synchronized Pair getPair(){
         return new Pair(p.getX(), p.getY());
     }

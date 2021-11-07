@@ -29,7 +29,7 @@ public class Pair {
         y++;
     }
 
-    public void checkState(){
+    public void checkState() {
         if (x != y)
             throw new PairValuesNotEqualsException();
     }
@@ -39,7 +39,7 @@ public class Pair {
         return "x: " + x + ", y: " + y;
     }
 
-    public class PairValuesNotEqualsException  extends RuntimeException{
+    public class PairValuesNotEqualsException extends RuntimeException {
 
         public PairValuesNotEqualsException() {
             super("Pair values not equal: " + Pair.this);
